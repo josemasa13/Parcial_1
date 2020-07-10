@@ -28,6 +28,16 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 
 // CREA TU FUNCION challenge1 aqui:
 
+function challenge1(){
+    var buttonNumber = parseInt(prompt("¿Cuantos botones necesitas?"));
+    var dummy = document.getElementById("dummy");
+    for(var i = 0; i < buttonNumber; i++){
+        var button = document.createElement("BUTTON");
+        button.innerHTML = nombres[i];
+        dummy.appendChild(button);
+    }
+}
+
 
 
 /*
@@ -35,7 +45,12 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 */
 
 // CREA TU FUNCION challenge2 2 aquí.
-
+function challenge2(){
+    var length = nombres.length;
+    for(var i = 0; i < length; i++){
+        console.log(nombres[i].toUpperCase());
+    }
+}
 
 
 /*
@@ -50,6 +65,7 @@ A) Define un objeto tipo "Dog" que reciba 3 parametros
 B) Crea 3 objectos siguiendo esa clase con diferentes valores
 
 eJ   var fido = new Dog("Fido","Cafe","Poodle")
+
 
 
 *****BONUS**** 10  puntos
@@ -68,7 +84,29 @@ Deberia escribir en consola
 */
 
 // CREA TU FUNCION printInfo() AQUI
+function printInfo(){
+    var result = `Nombre: ${this.nombre}, De color: ${this.color}, Raza: ${this.raza}`;
+    console.log(result);
+}
 
+function Dog(nombre, color, raza){
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+    this.printInfo = printInfo;
+}
+
+var fido = new Dog("Fido", "Cafe", "Poodle");
+var terry = new Dog("Terry", "Blanco", "Schnauzer");
+var dogo = new Dog("Dogo", "negro", "Pitbull")
+
+
+
+function challenge3(){
+    fido.printInfo();
+    terry.printInfo();
+    dogo.printInfo();
+}
 
 
 

@@ -1,6 +1,5 @@
 header {
-
-
+  display: none;
 }
 
 
@@ -9,65 +8,143 @@ h2 {
 }
 
 .nav {
-
-
-  }
-
-  li {
-
-
-  }
-
-  .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 10px;
 
 }
 
-  .aside {
+li {
+  width: 100%;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  text-align: center;
+  margin-bottom: 50px;
 
-  }
+}
 
-  .slidebox{
+.content{
+  display: none;
+}
 
-   
-  }
+.aside {
+  border: solid;
 
-  .article{
+}
 
-  }
+.slidebox{
+  border: solid;
+  text-align: center;
+}
+
+.article{
+  border: solid;
+  display: flex;
+}
 
 
 .poem{
+  border: solid;
 
 }
 
 
 /*Device = Tablets, Ipads (portrait)
-  Screen = B/w 600px to 990px*/
-  @media (min-width:600px) and (max-width: 990px)  {
-    .article {
+Screen = B/w 600px to 990px*/
+@media (min-width:600px) and (max-width: 990px)  {
+  .nav{
+    flex-direction: row;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-  } 
-header{
+  li{
+    margin-right: 2px;
+    margin-left: 2px;
+  }
 
-}
-}
+  .content{
+    display: flex;
+    flex-direction: row;
+  }
 
-/*  Small devices    */
-@media (max-width:599px) {
-
-header,.content{
-
-}
-
-.nav {
-
+  article {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
 
   }
 
+  .poem{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-.nav > li {
+  header{
+   
+  }
 
+  .aside{
+    width: 30%;
+  }
+
+  .slidebox{
+    text-align: center;
+  }
 }
+
+/*  Small devices    */
+@media (min-width:991px) {
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .aside{
+    width: 33%;
+  }
+
+
+
+  .content{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article{
+    flex-direction: row;
+    width: 66%;
+  }
+
+
+
+  .nav{
+    flex-direction: row;
+  }
+
+  li{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  h2{
+    border: solid;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  
 
 
 }
